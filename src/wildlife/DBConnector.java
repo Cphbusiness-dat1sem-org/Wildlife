@@ -34,7 +34,7 @@ public class DBConnector {
                 this.connection = DriverManager.getConnection(url, props);
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
                 ex.printStackTrace();
-                throw new SQLException("Class not found! (com.mysql.cj.jdbc.Driver)");
+                throw new SQLException(ex.getMessage());
             }
 	}
 
